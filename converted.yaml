@@ -7,7 +7,7 @@ info:
     name: MIT
     url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
 host: api.easyship.com
-basePath: 
+basePath: /
 securityDefinitions:
   auth:
     type: apiKey
@@ -20,7 +20,7 @@ consumes:
 produces:
 - application/json
 paths:
-  /rate/v1/rates:
+  rate/v1/rates:
     post:
       description: ''
       summary: Get Rates & Taxes
