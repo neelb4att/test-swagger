@@ -7,7 +7,6 @@ info:
     name: MIT
     url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
 host: api.easyship.com
-basePath: /
 securityDefinitions:
   auth:
     type: apiKey
