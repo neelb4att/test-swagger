@@ -1,0 +1,2330 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Easyship API
+  description: 'TODO: Add a description'
+  license:
+    name: MIT
+    url: http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT
+host: api.easyship.com
+basePath: /
+securityDefinitions:
+  auth:
+    type: apiKey
+    in: header
+    name: Authorization
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /rate/v1/rates:
+    post:
+      description: ''
+      summary: Get Rates & Taxes
+      tags:
+      - Rate API
+      operationId: Get Rates & Taxes
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/GetRates&TaxesRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/GetRates&TaxesResponse'
+          examples:
+            application/json:
+              rates:
+              - courier_id: 8ea55285-d53f-4b94-b788-17c4e5eefb5e
+                courier_name: Singapore Post - ePack
+                min_delivery_time: 5
+                max_delivery_time: 7
+                value_for_money_rank: 2
+                delivery_time_rank: 7
+                shipment_charge: 30.379999999999999
+                fuel_surcharge: 0
+                remote_area_surcharge:
+                shipment_charge_total: 30.379999999999999
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 30.379999999999999
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: false
+                courier_dropoff_url: https://www.easyship.com/drop-off/directlink/sg
+                tracking_rating: 2
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: 16691987-a149-441b-a777-727ffe5c3325
+                courier_name: UPS Worldwide Saver - Battery
+                min_delivery_time: 2
+                max_delivery_time: 5
+                value_for_money_rank: 1
+                delivery_time_rank: 4
+                shipment_charge: 52.079999999999998
+                fuel_surcharge: 5.859
+                remote_area_surcharge: 0
+                shipment_charge_total: 57.939
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 57.939999999999998
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: 200ff5db-6866-4fb9-851d-8943e8796b16
+                courier_name: Singapore Post - Airmail
+                min_delivery_time: 6
+                max_delivery_time: 8
+                value_for_money_rank: 3
+                delivery_time_rank: 9
+                shipment_charge: 43.600000000000001
+                fuel_surcharge: 0
+                remote_area_surcharge:
+                shipment_charge_total: 43.600000000000001
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 43.600000000000001
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: false
+                courier_dropoff_url: https://www.easyship.com/drop-off/directlink/sg
+                tracking_rating: 2
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: f14f77cf-7467-4e44-9b6c-df9ed5131af3
+                courier_name: UPS Worldwide Expedited
+                min_delivery_time: 3
+                max_delivery_time: 6
+                value_for_money_rank: 4
+                delivery_time_rank: 5
+                shipment_charge: 55.271999999999998
+                fuel_surcharge: 6.245736
+                remote_area_surcharge: 0
+                shipment_charge_total: 61.517735999999999
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 61.520000000000003
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: 462e4de9-0762-4c71-9cad-d6495ce364fb
+                courier_name: DHL Express
+                min_delivery_time: 2
+                max_delivery_time: 3
+                value_for_money_rank: 5
+                delivery_time_rank: 2
+                shipment_charge: 68.081999999999994
+                fuel_surcharge: 7.6592250000000002
+                remote_area_surcharge: 0
+                shipment_charge_total: 75.741225
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 75.739999999999995
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: f8ada333-02bc-499d-9514-fec36a1385e1
+                courier_name: Aramex
+                min_delivery_time: 3
+                max_delivery_time: 6
+                value_for_money_rank: 6
+                delivery_time_rank: 6
+                shipment_charge: 69.468000000000004
+                fuel_surcharge: 10.4202
+                remote_area_surcharge:
+                shipment_charge_total: 79.888199999999998
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 79.890000000000001
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: 0a22cb3e-17b6-4704-bf55-2305da21318c
+                courier_name: Fedex International Economy
+                min_delivery_time: 3
+                max_delivery_time: 4
+                value_for_money_rank: 7
+                delivery_time_rank: 3
+                shipment_charge: 79.379999999999995
+                fuel_surcharge: 8.3348999999999993
+                remote_area_surcharge: 0
+                shipment_charge_total: 87.7149
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 87.709999999999994
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: ef4e774a-46cf-464c-aefa-7970755bd506
+                courier_name: DPEX Worldwide
+                min_delivery_time: 4
+                max_delivery_time: 8
+                value_for_money_rank: 8
+                delivery_time_rank: 8
+                shipment_charge: 71.680000000000007
+                fuel_surcharge: 8.0640000000000001
+                remote_area_surcharge: 0
+                shipment_charge_total: 79.744
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 79.739999999999995
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: 638ac885-8105-422c-b2cc-4c57152772f7
+                courier_name: Fedex International Priority
+                min_delivery_time: 1
+                max_delivery_time: 2
+                value_for_money_rank: 9
+                delivery_time_rank: 1
+                shipment_charge: 111.258
+                fuel_surcharge: 1.1682090000000001
+                remote_area_surcharge: 0
+                shipment_charge_total: 112.426209
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 112.43000000000001
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+              - courier_id: 791e90cf-d1a2-4610-af48-ec9092be3a34
+                courier_name: TNT
+                min_delivery_time: 5
+                max_delivery_time: 10
+                value_for_money_rank: 10
+                delivery_time_rank: 10
+                shipment_charge: 86.828000000000003
+                fuel_surcharge: 11.07057
+                remote_area_surcharge: 0
+                shipment_charge_total: 97.898570000000007
+                warehouse_handling_fee: 0
+                insurance_fee: 0
+                ddp_handling_fee: 0
+                import_tax_charge: 0
+                import_duty_charge: 0
+                total_charge: 97.900000000000006
+                is_above_threshold: false
+                effective_incoterms: DDU
+                estimated_import_tax: 0
+                estimated_import_duty: 0
+                courier_does_pickup: true
+                courier_dropoff_url:
+                tracking_rating: 3
+                payment_recipient: Easyship
+                courier_remarks:
+                currency: SGD
+                box:
+                  name:
+                  length: 20
+                  width: 15
+                  height: 10
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /rate/v1/rates
+          headers:
+            Content-Type: application/json
+          body: '{  "origin_country_alpha2": "SG",  "origin_postal_code": "WC2N",  "destination_country_alpha2": "US",  "destination_postal_code": "10030",  "taxes_duties_paid_by": "Sender",  "is_insured": false,  "items": [    {      "actual_weight": 1.2,      "height": 10,      "width": 15,      "length": 20,      "category": "mobiles",      "declared_currency": "SGD",      "declared_customs_value": 100    }  ]}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{    "rates": [        {            "courier_id": "8ea55285-d53f-4b94-b788-17c4e5eefb5e",            "courier_name": "Singapore Post - ePack",            "min_delivery_time": 5,            "max_delivery_time": 7,            "value_for_money_rank": 2,            "delivery_time_rank": 7,            "shipment_charge": 30.38,            "fuel_surcharge": 0,            "remote_area_surcharge": null,            "shipment_charge_total": 30.38,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 30.38,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": false,            "courier_dropoff_url": "https://www.easyship.com/drop-off/directlink/sg",            "tracking_rating": 2,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "16691987-a149-441b-a777-727ffe5c3325",            "courier_name": "UPS Worldwide Saver - Battery",            "min_delivery_time": 2,            "max_delivery_time": 5,            "value_for_money_rank": 1,            "delivery_time_rank": 4,            "shipment_charge": 52.08,            "fuel_surcharge": 5.859,            "remote_area_surcharge": 0,            "shipment_charge_total": 57.939,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 57.94,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "200ff5db-6866-4fb9-851d-8943e8796b16",            "courier_name": "Singapore Post - Airmail",            "min_delivery_time": 6,            "max_delivery_time": 8,            "value_for_money_rank": 3,            "delivery_time_rank": 9,            "shipment_charge": 43.6,            "fuel_surcharge": 0,            "remote_area_surcharge": null,            "shipment_charge_total": 43.6,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 43.6,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": false,            "courier_dropoff_url": "https://www.easyship.com/drop-off/directlink/sg",            "tracking_rating": 2,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "f14f77cf-7467-4e44-9b6c-df9ed5131af3",            "courier_name": "UPS Worldwide Expedited",            "min_delivery_time": 3,            "max_delivery_time": 6,            "value_for_money_rank": 4,            "delivery_time_rank": 5,            "shipment_charge": 55.272,            "fuel_surcharge": 6.245736,            "remote_area_surcharge": 0,            "shipment_charge_total": 61.517736,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 61.52,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "462e4de9-0762-4c71-9cad-d6495ce364fb",            "courier_name": "DHL Express",            "min_delivery_time": 2,            "max_delivery_time": 3,            "value_for_money_rank": 5,            "delivery_time_rank": 2,            "shipment_charge": 68.082,            "fuel_surcharge": 7.659225,            "remote_area_surcharge": 0,            "shipment_charge_total": 75.741225,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 75.74,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "f8ada333-02bc-499d-9514-fec36a1385e1",            "courier_name": "Aramex",            "min_delivery_time": 3,            "max_delivery_time": 6,            "value_for_money_rank": 6,            "delivery_time_rank": 6,            "shipment_charge": 69.468,            "fuel_surcharge": 10.4202,            "remote_area_surcharge": null,            "shipment_charge_total": 79.8882,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 79.89,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "0a22cb3e-17b6-4704-bf55-2305da21318c",            "courier_name": "Fedex International Economy",            "min_delivery_time": 3,            "max_delivery_time": 4,            "value_for_money_rank": 7,            "delivery_time_rank": 3,            "shipment_charge": 79.38,            "fuel_surcharge": 8.3349,            "remote_area_surcharge": 0,            "shipment_charge_total": 87.7149,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 87.71,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "ef4e774a-46cf-464c-aefa-7970755bd506",            "courier_name": "DPEX Worldwide",            "min_delivery_time": 4,            "max_delivery_time": 8,            "value_for_money_rank": 8,            "delivery_time_rank": 8,            "shipment_charge": 71.68,            "fuel_surcharge": 8.064,            "remote_area_surcharge": 0,            "shipment_charge_total": 79.744,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 79.74,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "638ac885-8105-422c-b2cc-4c57152772f7",            "courier_name": "Fedex International Priority",            "min_delivery_time": 1,            "max_delivery_time": 2,            "value_for_money_rank": 9,            "delivery_time_rank": 1,            "shipment_charge": 111.258,            "fuel_surcharge": 1.168209,            "remote_area_surcharge": 0,            "shipment_charge_total": 112.426209,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 112.43,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        },        {            "courier_id": "791e90cf-d1a2-4610-af48-ec9092be3a34",            "courier_name": "TNT",            "min_delivery_time": 5,            "max_delivery_time": 10,            "value_for_money_rank": 10,            "delivery_time_rank": 10,            "shipment_charge": 86.828,            "fuel_surcharge": 11.07057,            "remote_area_surcharge": 0,            "shipment_charge_total": 97.89857,            "warehouse_handling_fee": 0,            "insurance_fee": 0,            "ddp_handling_fee": 0,            "import_tax_charge": 0,            "import_duty_charge": 0,            "total_charge": 97.9,            "is_above_threshold": false,            "effective_incoterms": "DDU",            "estimated_import_tax": 0,            "estimated_import_duty": 0,            "courier_does_pickup": true,            "courier_dropoff_url": null,            "tracking_rating": 3,            "payment_recipient": "Easyship",            "courier_remarks": null,            "currency": "SGD",            "box": {                "name": null,                "length": 20,                "width": 15,                "height": 10            }        }    ]}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Rates & Taxes1
+        x-testDescription: Testcase for testing endpoint Get Rates & Taxes
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /shipment/v1/shipments:
+    post:
+      description: ''
+      summary: Create a Shipment
+      tags:
+      - Shipment API
+      operationId: Create a Shipment
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/CreateAShipmentRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples: {}
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    get:
+      description: ''
+      summary: Get Shipments
+      tags:
+      - Shipment API
+      operationId: Get Shipments
+      produces:
+      - application/json
+      parameters:
+      - name: platform_order_number
+        in: query
+        required: false
+        type: string
+        description: Order number on the sales platform
+      - name: easyship_shipment_id
+        in: query
+        required: false
+        type: string
+        description: Easyship Shipment ID provided when creating the shipment
+      - name: page
+        in: query
+        required: false
+        type: integer
+        format: int32
+        description: 'Which page number you want to fetch, default: 1'
+      - name: per_page
+        in: query
+        required: false
+        type: integer
+        format: int32
+        description: 'Number of Shipments per page to fetch, default: 25, max: 100'
+      - name: shipment_state
+        in: query
+        required: false
+        type: string
+        description: >-
+          search by current status of shipment.
+
+          + options:
+              + `created` shipment has been created
+              + `cancelled` shipment has been cancelled
+      - name: pickup_state
+        in: query
+        required: false
+        type: string
+        description: >-
+          search by current pickup status of shipment.
+
+          + options:
+              + `not_requested` pickup has not been requested
+              + `pending_confirmation` courier has not confirmed pickup
+              + `pending_drop_off` package needs to be dropped off to courier
+              + `request_failed` pickup request has failed
+              + `requested` pickup has been requested
+              + `completed` package has been picked up/handed over/dropped off
+              + `cancelled` pickup has been cancelled
+      - name: delivery_state
+        in: query
+        required: false
+        type: string
+        description: >-
+          search by current delivery status of shipment.
+
+          + options:
+              + `not_created` delivery has not been created
+              + `pending` pending tracking event
+              + `info_received` Carrier has received request from shipper and is about to pick up the shipment.
+              + `in_transit_to_customer` Carrier has accepted or picked up shipment from shipper. The shipment is on the way.
+              + `out_for_delivery` Carrier is about to deliver the shipment , or it is ready to pickup.
+              + `delivered`   The shipment was delivered successfully.
+              + `failed_attempt`  Carrier attempted to deliver but failed, and usually leaves a notice and will try to delivery again.
+              + `exception` Custom hold, undelivered, returneipment to sender or any shipping exceptions.
+              + `expired` tracking expired, will reactivate within 24 hours.
+              + `lost_by_courier` delivery has been lost by courier
+              + `returned_to_shipper` delivery has been returned to shipper
+      - name: label_state
+        in: query
+        required: false
+        type: string
+        description: >-
+          search by current label status of shipment.
+
+          + options:
+              + `not_created` label has not been created
+              + `pending` label is being generated
+              + `generated` label has generated succesfully
+              + `printed` label has been printed
+              + `failed` label generation has failed
+      - name: created_at_from
+        in: query
+        required: false
+        type: string
+        description: 'search for shipments created since this date: ISO8601 date format.'
+      - name: created_at_to
+        in: query
+        required: false
+        type: string
+        description: 'search for shipments created before this date: ISO8601 date format.'
+      - name: confirmed_at_from
+        in: query
+        required: false
+        type: string
+        description: 'search for shipments confirmed since this date: ISO8601 date format.'
+      - name: confirmed_at_to
+        in: query
+        required: false
+        type: string
+        description: 'search for shipments confirmed before this date: ISO8601 date format.'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples: {}
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /shipment/v1/shipments/{easyship_shipment_id}:
+    delete:
+      description: ''
+      summary: Delete a Shipment
+      tags:
+      - Shipment API
+      operationId: Delete a Shipment
+      produces:
+      - application/json
+      parameters:
+      - name: easyship_shipment_id
+        in: path
+        required: true
+        type: string
+        description: Shipment ID provided by Easyship.
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/DeleteAShipmentResponse'
+          examples:
+            application/json:
+              status: Shipment successfully deleted
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: DELETE
+          uri: /shipment/v1/shipments/ESHK0001785
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{    "status": "Shipment successfully deleted"}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Delete a Shipment1
+        x-testDescription: Testcase for testing endpoint Delete a Shipment
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+    patch:
+      description: ''
+      summary: Update a Shipment
+      tags:
+      - Shipment API
+      operationId: Update a Shipment
+      produces:
+      - application/json
+      parameters:
+      - name: easyship_shipment_id
+        in: path
+        required: true
+        type: string
+        description: Shipment ID provided by Easyship.
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateAShipmentRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples: {}
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /label/v1/labels:
+    post:
+      description: ''
+      summary: Buy Labels
+      tags:
+      - Label API
+      operationId: Buy Labels
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/BuyLabelsRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/BuyLabelsResponse'
+          examples:
+            application/json:
+              message: Your labels are being generated
+              total_cost: 76
+              available_balance: 924
+              labels:
+              - easyship_shipment_id: ESUS3171766
+                label_state: pending
+                label_url:
+                status: success
+                tracking_number:
+                tracking_page_url: https://www.easyship.com/shipment-tracking/ESUS3171766
+              - easyship_shipment_id: ESUS2513756
+                label_state: pending
+                label_url:
+                status: success
+                tracking_number:
+                tracking_page_url: https://www.easyship.com/shipment-tracking/ESUS2513756
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /label/v1/labels
+          headers:
+            Content-Type: application/json
+          body: '{  "shipments": [    {      "easyship_shipment_id": "ESUS3171766",      "courier_id": "b4552ed2-ae95-4647-9746-5790bf252c7f"    },    {      "easyship_shipment_id": "ESUS2513756"    }  ]}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{    "message": "Your labels are being generated",    "total_cost": 76.0,    "available_balance": 924.0,    "labels": [        {            "easyship_shipment_id": "ESUS3171766",            "label_state": "pending",            "label_url": null,            "status": "success",            "tracking_number": null,            "tracking_page_url": "https://www.easyship.com/shipment-tracking/ESUS3171766"        },        {            "easyship_shipment_id": "ESUS2513756",            "label_state": "pending",            "label_url": null,            "status": "success",            "tracking_number": null,            "tracking_page_url": "https://www.easyship.com/shipment-tracking/ESUS2513756"        }    ]}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Buy Labels1
+        x-testDescription: Testcase for testing endpoint Buy Labels
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /pickup/v1/pickup_slots/{courier_id}:
+    get:
+      description: Available Pickup Slots will be calculated for a specific Courier, in local time and for the coming 7 days. A Pickup can then be requested using the **Request Pickup** call.
+      summary: Get Available Pickup Slots
+      tags:
+      - Pickup API
+      operationId: Get Available Pickup Slots
+      produces:
+      - application/json
+      parameters:
+      - name: courier_id
+        in: path
+        required: true
+        type: string
+        description: Courier ID provided by Easyship
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/GetAvailablePickupSlotsResponse'
+          examples:
+            application/json:
+              courier_id: b4552ed2-ae95-4647-9746-5790bf252c7f
+              courier_name: UPS
+              message: This Courier provides a pickup service. The available time slots are shown in local time, for the coming 7 days.
+              pickup:
+                provider_name: UPS
+                provider_customer_service_phone: +1 2345 6789
+                slots:
+                  2017-04-25:
+                  - min_time: 17
+                    max_time: 21
+                  2017-04-26:
+                  - min_time: 10
+                    max_time: 13
+                  - min_time: 13
+                    max_time: 17
+                  - min_time: 17
+                    max_time: 21
+                  2017-04-27:
+                  - min_time: 10
+                    max_time: 13
+                  - min_time: 13
+                    max_time: 17
+                  - min_time: 17
+                    max_time: 21
+                  2017-04-28:
+                  - min_time: 10
+                    max_time: 13
+                  - min_time: 13
+                    max_time: 17
+                  - min_time: 17
+                    max_time: 21
+                  2017-04-29:
+                  - min_time: 10
+                    max_time: 13
+                  - min_time: 13
+                    max_time: 17
+                  2017-04-30: []
+                  2017-05-01:
+                  - min_time: 10
+                    max_time: 13
+                  - min_time: 13
+                    max_time: 17
+                  - min_time: 17
+                    max_time: 21
+                  - min_time: 23
+                    max_time: 24
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /pickup/v1/pickup_slots/b4552ed2-ae95-4647-9746-5790bf252c7f
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{    "courier_id": "b4552ed2-ae95-4647-9746-5790bf252c7f",    "courier_name": "UPS",    "message": "This Courier provides a pickup service. The available time slots are shown in local time, for the coming 7 days.",    "pickup": {        "provider_name": "UPS",        "provider_customer_service_phone": "+1 2345 6789",        "slots": {            "2017-04-25": [                {                    "min_time": 17,                    "max_time": 21                }            ],            "2017-04-26": [                {                    "min_time": 10,                    "max_time": 13                },                {                    "min_time": 13,                    "max_time": 17                },                {                    "min_time": 17,                    "max_time": 21                }            ],            "2017-04-27": [                {                    "min_time": 10,                    "max_time": 13                },                {                    "min_time": 13,                    "max_time": 17                },                {                    "min_time": 17,                    "max_time": 21                }            ],            "2017-04-28": [                {                    "min_time": 10,                    "max_time": 13                },                {                    "min_time": 13,                    "max_time": 17                },                {                    "min_time": 17,                    "max_time": 21                }            ],            "2017-04-29": [                {                    "min_time": 10,                    "max_time": 13                },                {                    "min_time": 13,                    "max_time": 17                }            ],            "2017-04-30": [],            "2017-05-01": [                {                    "min_time": 10,                    "max_time": 13                },                {                    "min_time": 13,                    "max_time": 17                },                {                    "min_time": 17,                    "max_time": 21                },                {                    "min_time": 23,                    "max_time": 24                }            ]        }    }}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Available Pickup Slots1
+        x-testDescription: Available Pickup Slots will be calculated for a specific Courier, in local time and for the coming 7 days. A Pickup can then be requested using the **Request Pickup** call.
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /pickup/v1/pickups:
+    post:
+      description: >-
+        When a Pickup is created, a pickup request will be made directly to the Courier, which will return a reference number. The reference number may be used when contacting the Customer Service of the Courier.
+
+        A pickup slot must be chosen; upcoming pickup slots may be found using the **Get Available Pickup Slots** call
+      summary: Request a Pickup
+      tags:
+      - Pickup API
+      operationId: Request a Pickup
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/RequestAPickupRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/RequestAPickupResponse'
+          examples:
+            application/json:
+              courier_id: b4552ed2-ae95-4647-9746-5790bf252c7f
+              courier_name: UPS
+              easyship_shipment_ids:
+              - ESUS3171766
+              pickup:
+                easyship_pickup_id: PHK0000001
+                preferred_min_time: 2016-12-08T09:00
+                preferred_max_time: 2016-12-08T18:00
+                pickup_reference_number: 292494AGF4L
+                provider_name: UPS
+                provider_customer_service_phone: +1 2345 6789
+                shipments_count: 1
+                total_actual_weight: 1.0
+                pickup_state: requested
+                address:
+                  line_1: 123 Test Street
+                  line_2: Block 3
+                  line_3: Unit 1000
+                  postal_code: ABC123
+                  city: Hong Kong
+                  state:
+                  country: Hong Kong
+                  contact_email: asd@asd.com
+                  contact_phone: +852-1234-5678
+                  company_name: Test Plc.
+                  contact_name: Foo Bar
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /pickup/v1/pickups
+          headers:
+            Content-Type: application/json
+          body: '{  "courier_id": "b4552ed2-ae95-4647-9746-5790bf252c7f",  "preferred_date": "2016-12-08",  "preferred_max_time": "2016-12-08T18:00",  "preferred_min_time": "2016-12-08T09:00",  "easyship_shipment_ids": [    "ESUS3171766"  ]}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{    "courier_id": "b4552ed2-ae95-4647-9746-5790bf252c7f",    "courier_name": "UPS",    "easyship_shipment_ids": [        "ESUS3171766"    ],    "pickup":        {            "easyship_pickup_id": "PHK0000001",            "preferred_min_time": "2016-12-08T09:00",            "preferred_max_time": "2016-12-08T18:00",            "pickup_reference_number": "292494AGF4L",            "provider_name": "UPS",            "provider_customer_service_phone": "+1 2345 6789",            "shipments_count": "1",            "total_actual_weight": "1.0",            "pickup_state": "requested",            "address":                {                    "line_1": "123 Test Street",                    "line_2": "Block 3",                    "line_3": "Unit 1000",                    "postal_code": "ABC123",                    "city": "Hong Kong",                    "state": null,                    "country": "Hong Kong",                    "contact_email": "asd@asd.com",                    "contact_phone": "+852-1234-5678",                    "company_name": "Test Plc.",                    "contact_name": "Foo Bar",                }        }}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Request a Pickup1
+        x-testDescription: >-
+          When a Pickup is created, a pickup request will be made directly to the Courier, which will return a reference number. The reference number may be used when contacting the Customer Service of the Courier.
+
+          A pickup slot must be chosen; upcoming pickup slots may be found using the **Get Available Pickup Slots** call
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /pickup/v1/direct_handover:
+    post:
+      description: >-
+        This is the alternative to requesting a Pickup, to be used either when the courier doesn't provide a pickup service, or when a pickup is already scheduled at your warehouse on a regular basis.
+
+        Marking the shipments as handed over is key to start the tracking those shipments, and to notify the receiver with the tracking information by email.
+      summary: Mark as Directly Handed Over
+      tags:
+      - Pickup API
+      operationId: Mark as Directly Handed Over
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/MarkAsDirectlyHandedOverRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/MarkAsDirectlyHandedOverResponse'
+          examples:
+            application/json:
+              direct_handover:
+                easyship_shipment_ids:
+                - ESUS3171766
+                pickup_state: completed
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: POST
+          uri: /pickup/v1/direct_handover
+          headers:
+            Content-Type: application/json
+          body: '{  "easyship_shipment_ids": [    "ESUS3171766"  ]}'
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{    "direct_handover":        {            "easyship_shipment_ids": [                "ESUS3171766"            ],            "pickup_state": "completed"        }}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Mark as Directly Handed Over1
+        x-testDescription: >-
+          This is the alternative to requesting a Pickup, to be used either when the courier doesn't provide a pickup service, or when a pickup is already scheduled at your warehouse on a regular basis.
+
+          Marking the shipments as handed over is key to start the tracking those shipments, and to notify the receiver with the tracking information by email.
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /track/v1/checkpoints:
+    get:
+      description: ''
+      summary: Get Checkpoints
+      tags:
+      - Track API
+      operationId: Get Checkpoints
+      produces:
+      - application/json
+      parameters:
+      - name: easyship_shipment_id
+        in: query
+        required: false
+        type: string
+        description: 'Shipment ID provided by Easyship. If you want to get multiple shipments, use comma (**,**) to seperate each ID. Ex: "ESHK0001785,ESHK0001786"'
+      - name: platform_order_number
+        in: query
+        required: false
+        type: string
+        description: 'Order number on the sales platform. You can choose to use either easyship_shipment_id or platform_order_number. If you want to get multiple shipments, use comma (**,**) to seperate each order number. Ex: "#1234,#1235"'
+      - name: page
+        in: query
+        required: false
+        type: integer
+        format: int32
+        description: 'Which page number you want to fetch, default: 1'
+      - name: per_page
+        in: query
+        required: false
+        type: integer
+        format: int32
+        description: 'Number of Shipments per page to fetch, default: 25, max: 100'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples: {}
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /track/v1/status: 
+    get:
+      description: ''
+      summary: Get Status
+      tags:
+      - Track API
+      operationId: Get Status
+      produces:
+      - application/json
+      parameters:
+      - name: easyship_shipment_id
+        in: query
+        required: false
+        type: string
+        description: 'Shipment ID provided by Easyship. If you want to get multiple shipments, use comma (**,**) to seperate each ID. Ex: "ESHK0001785,ESHK0001786"'
+      - name: platform_order_number
+        in: query
+        required: false
+        type: string
+        description: 'Order number on the sales platform. You can choose to use either easyship_shipment_id or platform_order_number. If you want to get multiple shipments, use comma (**,**) to seperate each order number. Ex: "#1234,#1235"'
+      - name: page
+        in: query
+        required: false
+        type: integer
+        format: int32
+        description: 'Which page number you want to fetch, default: 1'
+      - name: per_page
+        in: query
+        required: false
+        type: integer
+        format: int32
+        description: 'Number of Shipments per page to fetch, default: 25, max: 100'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples: {}
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /company/v1/settings:
+    patch:
+      description: >-
+        ## Addresses
+
+        These 3 addresses are mandatory to create shipments and buy labels:
+
+        * `pickup`: where you are shipping from, e.g. your warehouse. This address will be used to calculate the shipments' rates, and as the pickup address for the couriers that offer a pickup service
+
+        * `sender`: the information printed on the shipping documents. This address will be used as the party responsible for your shipments.
+
+        * `billing`: the invoices we send you will refer to this address
+
+        ## Validate the callback URL
+
+        If you attempt to update or create `label_callback_url`, Easyship will `POST` a test request to your `label_callback_url` shown as below. The callback url will only be updated if a valid response is received.
+
+        ```
+
+        "api_settings": {
+            "label_callback_url": "https://api.myshop.com/webhook"
+        }
+
+        ```
+
+        API tries to send this request:
+
+        ```
+
+        POST https://api.myshop.com/webhook
+
+        {
+            "label": {
+                "easyship_shipment_id": "ESTEST00000",
+                "status": "success",
+                "label_url": "https://goeasyship.s3.amazonaws.com/ESTEST00000_label.pdf",
+                "tracking_number":      '12345',
+                "tracking_page_url":    'https://www.easyship.com/shipment-tracking/ESHK0040989'
+            }
+        }
+
+        ```
+
+        Please make sure that your application will return `JSON` shown as below:
+
+        ```
+
+        status 200
+
+        {
+            "label_received": true
+        }
+
+        ```
+
+        > The `label_callback_url` will only be updated if the test passes.
+
+        ## Authentify the callback URL
+
+        If you want to make sure that the requests are sent by Easyship, you can compare `HTTP_X_EASYSHIP_JWT` in the header, which is encoded by `JWT` using your `API Secret` and post body.
+
+        Ruby Example:
+
+        ```
+
+        require 'rubygems'
+
+        require 'jwt'
+
+        require 'openssl'
+
+        require 'sinatra'
+
+        API_SECRET = <your API secret>
+
+        helpers do
+          # Compare the JWT based on the secret and the request contents
+          # to the reported HTTP_X_EASYSHIP_JWT in the headers
+          def verify_webhook(data, jwt_header)
+            calculated_jwt = JWT.encode(data, OpenSSL::PKey::RSA.new(API_SECRET), 'RS256')
+            calculated_jwt == jwt_header
+          end
+        end
+
+        # Respond to HTTP POST requests sent to this web service
+
+        post '/' do
+          request.body.rewind
+          data = request.body.read
+          verified = verify_webhook(JSON.parse(data), env["HTTP_X_EASYSHIP_JWT"])
+          if verified
+            { label_received: true }.to_json
+          else
+            { label_received: false }.to_json
+          end
+        end
+
+        ```
+      summary: Update Settings
+      tags:
+      - Company API
+      operationId: Update Settings
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/UpdateSettingsRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            type: object
+          examples: {}
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /company/v1/credits:
+    post:
+      description: Through this resource, you are able to top up your Easyship balance. In order to add credits, you need to have a default credit card set in the Easyship dashboard. Please note that the currency used is the currency associated with your company.
+      summary: Add Credits
+      tags:
+      - Company API
+      operationId: Add Credits
+      produces:
+      - application/json
+      parameters:
+      - name: body
+        in: body
+        required: true
+        description: ''
+        schema:
+          $ref: '#/definitions/AddCreditsRequest'
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/AddCreditsResponse'
+          examples:
+            application/json:
+              payment_id: PHK01111172607
+              status: approved
+              credit_card_last_digits: 4242
+              available_balance: 6387.7600000000002
+              curreny: HKD
+      security:
+      - auth: []
+      x-unitTests: []
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+  /reference/v1/categories:
+    get:
+      description: ''
+      summary: Get Item Categories
+      tags:
+      - Reference API
+      operationId: Get Item Categories
+      produces:
+      - application/json
+      parameters: []
+      responses:
+        200:
+          description: ''
+          schema:
+            $ref: '#/definitions/GetItemCategoriesResponse'
+          examples:
+            application/json:
+              categories:
+              - name: Mobile Phones
+                slug: mobile_phones
+              - name: Tablets
+                slug: tablets
+              - name: Computers & Laptops
+                slug: computers_laptops
+              - name: Cameras
+                slug: cameras
+              - name: Accessory (no-battery)
+                slug: accessory_no_battery
+              - name: Accessory (with battery)
+                slug: accessory_with_battery
+              - name: Health & Beauty
+                slug: health_beauty
+              - name: Fashion
+                slug: fashion
+              - name: Watches
+                slug: watches
+              - name: Home Appliances
+                slug: home_appliances
+              - name: Home Decor
+                slug: home_decor
+              - name: Toys
+                slug: toys
+              - name: Sport & Leisure
+                slug: sport_leisure
+              - name: Bags & Luggages
+                slug: bags_luggages
+              - name: Audio Video
+                slug: audio_video
+              - name: Documents
+                slug: documents
+              - name: Jewelry
+                slug: jewelry
+              - name: Dry Food & Supplements
+                slug: dry_food_supplements
+              - name: Books & Collectibles
+                slug: books_collectibles
+              - name: Pet Accessory
+                slug: pet_accessory
+              - name: Gaming
+                slug: gaming
+              - name: Crowdfunding
+                slug: crowdfunding
+              - name: Others
+                slug: others
+      security:
+      - auth: []
+      x-unitTests:
+      - request:
+          method: GET
+          uri: /reference/v1/categories
+        expectedResponse:
+          x-allowExtraHeaders: true
+          x-bodyMatchMode: RAW
+          x-arrayOrderedMatching: false
+          x-arrayCheckCount: false
+          x-matchResponseSchema: true
+          headers:
+            Content-Type: application/json
+          body: '{  "categories": [    {      "name": "Mobile Phones",      "slug": "mobile_phones"    },    {      "name": "Tablets",      "slug": "tablets"    },    {      "name": "Computers & Laptops",      "slug": "computers_laptops"    },    {      "name": "Cameras",      "slug": "cameras"    },    {      "name": "Accessory (no-battery)",      "slug": "accessory_no_battery"    },    {      "name": "Accessory (with battery)",      "slug": "accessory_with_battery"    },    {      "name": "Health & Beauty",      "slug": "health_beauty"    },    {      "name": "Fashion",      "slug": "fashion"    },    {      "name": "Watches",      "slug": "watches"    },    {      "name": "Home Appliances",      "slug": "home_appliances"    },    {      "name": "Home Decor",      "slug": "home_decor"    },    {      "name": "Toys",      "slug": "toys"    },    {      "name": "Sport & Leisure",      "slug": "sport_leisure"    },    {      "name": "Bags & Luggages",      "slug": "bags_luggages"    },    {      "name": "Audio Video",      "slug": "audio_video"    },    {      "name": "Documents",      "slug": "documents"    },    {      "name": "Jewelry",      "slug": "jewelry"    },    {      "name": "Dry Food & Supplements",      "slug": "dry_food_supplements"    },    {      "name": "Books & Collectibles",      "slug": "books_collectibles"    },    {      "name": "Pet Accessory",      "slug": "pet_accessory"    },    {      "name": "Gaming",      "slug": "gaming"    },    {      "name": "Crowdfunding",      "slug": "crowdfunding"    },    {      "name": "Others",      "slug": "others"    }  ]}'
+        x-testShouldPass: true
+        x-testEnabled: true
+        x-testName: Get Item Categories1
+        x-testDescription: Testcase for testing endpoint Get Item Categories
+      x-operation-settings:
+        CollectParameters: false
+        AllowDynamicQueryParameters: false
+        AllowDynamicFormParameters: false
+        IsMultiContentStreaming: false
+definitions:
+  GetRates&TaxesRequest:
+    title: Get Rates & Taxes request
+    example:
+      origin_country_alpha2: SG
+      origin_postal_code: WC2N
+      destination_country_alpha2: US
+      destination_postal_code: 10030
+      taxes_duties_paid_by: Sender
+      is_insured: false
+      items:
+      - actual_weight: 1.2
+        height: 10
+        width: 15
+        length: 20
+        category: mobiles
+        declared_currency: SGD
+        declared_customs_value: 100
+    type: object
+    properties:
+      origin_country_alpha2:
+        description: Origin Country Alpha2 [(see list of country alpha2 codes)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+        example: SG
+        type: string
+      origin_postal_code:
+        description: Origin . Mandatory for most countries (if not applicable, leave `null` or `0`)
+        example: WC2N
+        type: string
+      destination_country_alpha2:
+        description: Destination Country Alpha2 [(see list of country alpha2 codes)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+        example: US
+        type: string
+      destination_postal_code:
+        description: Destination postal code. Mandatory for most countries (if not applicable, leave `null` or `0`)
+        example: 10030
+        type: string
+      items:
+        description: 'All shipment items, see below:'
+        type: array
+        items:
+          $ref: '#/definitions/Items'
+      taxes_duties_paid_by:
+        description: 'Taxes & Duties paid by. Allowed values: `Sender, Receiver`. Default: `Sender`'
+        example: Sender
+        type: string
+      is_insured:
+        description: 'Shipment includes insurance fee. Default: `false`'
+        type: boolean
+    required:
+    - origin_country_alpha2
+    - origin_postal_code
+    - destination_country_alpha2
+    - destination_postal_code
+    - items
+  Items:
+    title: items
+    type: object
+    properties:
+      actual_weight:
+        description: Item's actual weight in kg
+        example: 1.2
+        type: number
+        format: double
+      height:
+        description: Item's  height in cm
+        example: 10
+        type: number
+        format: double
+      width:
+        description: Item's  width in cm
+        example: 15
+        type: number
+        format: double
+      length:
+        description: Item's length in cm
+        example: 20
+        type: number
+        format: double
+      category:
+        description: "Item's category. Allowed values: `mobiles, tablets, computers_laptops, cameras, accessory_no_battery, accessory_battery, health_beauty, fashion, watches, home_appliances, home_decor, toys, sport, luggage, audio_video, documents, jewelry, dry_food_supplements, books_collectionables, pet_accessory, gaming`"
+        example: mobiles
+        type: string
+      declared_currency:
+        description: Item's customs value currency [(see list of supported currencies)](https://developers.google.com/adsense/management/appendix/currencies)
+        example: SGD
+        type: string
+      declared_customs_value:
+        description: Item's customs value
+        example: 100
+        type: number
+        format: double
+    required:
+    - actual_weight
+    - height
+    - width
+    - length
+    - category
+    - declared_currency
+    - declared_customs_value
+  GetRates&TaxesResponse:
+    title: Get Rates & Taxes response
+    example:
+      rates:
+      - courier_id: 8ea55285-d53f-4b94-b788-17c4e5eefb5e
+        courier_name: Singapore Post - ePack
+        min_delivery_time: 5
+        max_delivery_time: 7
+        value_for_money_rank: 2
+        delivery_time_rank: 7
+        shipment_charge: 30.379999999999999
+        fuel_surcharge: 0
+        remote_area_surcharge:
+        shipment_charge_total: 30.379999999999999
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 30.379999999999999
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: false
+        courier_dropoff_url: https://www.easyship.com/drop-off/directlink/sg
+        tracking_rating: 2
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: 16691987-a149-441b-a777-727ffe5c3325
+        courier_name: UPS Worldwide Saver - Battery
+        min_delivery_time: 2
+        max_delivery_time: 5
+        value_for_money_rank: 1
+        delivery_time_rank: 4
+        shipment_charge: 52.079999999999998
+        fuel_surcharge: 5.859
+        remote_area_surcharge: 0
+        shipment_charge_total: 57.939
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 57.939999999999998
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: 200ff5db-6866-4fb9-851d-8943e8796b16
+        courier_name: Singapore Post - Airmail
+        min_delivery_time: 6
+        max_delivery_time: 8
+        value_for_money_rank: 3
+        delivery_time_rank: 9
+        shipment_charge: 43.600000000000001
+        fuel_surcharge: 0
+        remote_area_surcharge:
+        shipment_charge_total: 43.600000000000001
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 43.600000000000001
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: false
+        courier_dropoff_url: https://www.easyship.com/drop-off/directlink/sg
+        tracking_rating: 2
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: f14f77cf-7467-4e44-9b6c-df9ed5131af3
+        courier_name: UPS Worldwide Expedited
+        min_delivery_time: 3
+        max_delivery_time: 6
+        value_for_money_rank: 4
+        delivery_time_rank: 5
+        shipment_charge: 55.271999999999998
+        fuel_surcharge: 6.245736
+        remote_area_surcharge: 0
+        shipment_charge_total: 61.517735999999999
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 61.520000000000003
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: 462e4de9-0762-4c71-9cad-d6495ce364fb
+        courier_name: DHL Express
+        min_delivery_time: 2
+        max_delivery_time: 3
+        value_for_money_rank: 5
+        delivery_time_rank: 2
+        shipment_charge: 68.081999999999994
+        fuel_surcharge: 7.6592250000000002
+        remote_area_surcharge: 0
+        shipment_charge_total: 75.741225
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 75.739999999999995
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: f8ada333-02bc-499d-9514-fec36a1385e1
+        courier_name: Aramex
+        min_delivery_time: 3
+        max_delivery_time: 6
+        value_for_money_rank: 6
+        delivery_time_rank: 6
+        shipment_charge: 69.468000000000004
+        fuel_surcharge: 10.4202
+        remote_area_surcharge:
+        shipment_charge_total: 79.888199999999998
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 79.890000000000001
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: 0a22cb3e-17b6-4704-bf55-2305da21318c
+        courier_name: Fedex International Economy
+        min_delivery_time: 3
+        max_delivery_time: 4
+        value_for_money_rank: 7
+        delivery_time_rank: 3
+        shipment_charge: 79.379999999999995
+        fuel_surcharge: 8.3348999999999993
+        remote_area_surcharge: 0
+        shipment_charge_total: 87.7149
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 87.709999999999994
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: ef4e774a-46cf-464c-aefa-7970755bd506
+        courier_name: DPEX Worldwide
+        min_delivery_time: 4
+        max_delivery_time: 8
+        value_for_money_rank: 8
+        delivery_time_rank: 8
+        shipment_charge: 71.680000000000007
+        fuel_surcharge: 8.0640000000000001
+        remote_area_surcharge: 0
+        shipment_charge_total: 79.744
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 79.739999999999995
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: 638ac885-8105-422c-b2cc-4c57152772f7
+        courier_name: Fedex International Priority
+        min_delivery_time: 1
+        max_delivery_time: 2
+        value_for_money_rank: 9
+        delivery_time_rank: 1
+        shipment_charge: 111.258
+        fuel_surcharge: 1.1682090000000001
+        remote_area_surcharge: 0
+        shipment_charge_total: 112.426209
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 112.43000000000001
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+      - courier_id: 791e90cf-d1a2-4610-af48-ec9092be3a34
+        courier_name: TNT
+        min_delivery_time: 5
+        max_delivery_time: 10
+        value_for_money_rank: 10
+        delivery_time_rank: 10
+        shipment_charge: 86.828000000000003
+        fuel_surcharge: 11.07057
+        remote_area_surcharge: 0
+        shipment_charge_total: 97.898570000000007
+        warehouse_handling_fee: 0
+        insurance_fee: 0
+        ddp_handling_fee: 0
+        import_tax_charge: 0
+        import_duty_charge: 0
+        total_charge: 97.900000000000006
+        is_above_threshold: false
+        effective_incoterms: DDU
+        estimated_import_tax: 0
+        estimated_import_duty: 0
+        courier_does_pickup: true
+        courier_dropoff_url:
+        tracking_rating: 3
+        payment_recipient: Easyship
+        courier_remarks:
+        currency: SGD
+        box:
+          name:
+          length: 20
+          width: 15
+          height: 10
+    type: object
+    properties:
+      rates:
+        description: ''
+        type: array
+        items:
+          type: object
+    required:
+    - rates
+  CreateAShipmentRequest:
+    title: Create a Shipment request
+    type: object
+    properties:
+      destination_country_alpha2:
+        description: Destination Country ISO 3166-1 alpha-2 [(see list of country alpha2 codes)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+        example: US
+        type: string
+      destination_city:
+        description: Destination City
+        example: New York
+        type: string
+      destination_name:
+        description: "Receiver's name. Maximum: `30`"
+        example: Aloha Chen
+        type: string
+      destination_address_line_1:
+        description: "Receiver's address line 1. Maximum: `50`"
+        example: 300 Park Avenue
+        type: string
+      destination_phone_number:
+        description: "Receiver's phone number. Mandatory for most couriers to facilitate the delivery. Maximum: `50`"
+        example: +1 234-567-890
+        type: string
+      items:
+        description: 'All shipment items, see below:'
+        type: array
+        items:
+          $ref: '#/definitions/Items4'
+      platform_name:
+        description: 'Sales platform name. Maximum: `200`'
+        example: Amazon
+        type: string
+      platform_order_number:
+        description: 'Order number on the sales platform. This number can be used to track the associated shipment. Maximum: `200`'
+        example: '#1234'
+        type: string
+      taxes_duties_paid_by:
+        description: 'Taxes & Duties paid by. Allowed values: `Sender, Receiver`. Default: `Sender`'
+        type: string
+      is_insured:
+        description: 'Optional, shipment will include insurance fee. Default: `false`'
+        type: boolean
+      selected_courier_id:
+        description: 'Optional, courier will be selected by default (applies if you integrate with Rate API). Default: `null`'
+        example: b8d528a7-a2d4-4510-a7ac-11cbbb6542cd
+        type: string
+      destination_postal_code:
+        description: Destination postal code. Mandatory for most countries (if not applicable, leave `null` or `0`)
+        example: 10022
+        type: string
+      destination_state:
+        description: Destination state. Mandatory for some countries (AU, CA, CN, MX, MY, US)
+        example: NY
+        type: string
+      destination_address_line_2:
+        description: "Receiver's address line 2. Maximum: `50`"
+        type: string
+      destination_email_address:
+        description: "Receiver's email. Required to send notifications to the receiver to track their package; mandatory for some couriers to facilitate the delivery. Maximum: `100`"
+        example: api-support@easyship.com
+        type: string
+    required:
+    - destination_country_alpha2
+    - destination_city
+    - destination_name
+    - destination_address_line_1
+    - destination_phone_number
+    - items
+  Items4:
+    title: items4
+    type: object
+    properties:
+      description:
+        description: "Item's description. Maximum: `200`"
+        example: Silk dress
+        type: string
+      actual_weight:
+        description: Item's actual weight in kg, must be greater than 0
+        example: 1.2
+        type: number
+        format: double
+      height:
+        description: Item's  height in cm, must be greater than 0 unless category is `documents`
+        example: 10
+        type: number
+        format: double
+      width:
+        description: Item's  width in cm, must be greater than 0 unless category is `documents`
+        example: 15
+        type: number
+        format: double
+      length:
+        description: Item's length in cm, must be greater than 0 unless category is `documents`
+        example: 20
+        type: number
+        format: double
+      category:
+        description: "Item's category. Allowed values: `mobiles, tablets, computers_laptops, cameras, accessory_no_battery, accessory_battery, health_beauty, fashion, watches, home_appliances, home_decor, toys, sport, luggage, audio_video, documents, jewelry, dry_food_supplements, books_collectionables, pet_accessory, gaming`"
+        example: fashion
+        type: string
+      declared_currency:
+        description: Item's customs value currency [(see list of supported currencies)](https://developers.google.com/adsense/management/appendix/currencies)
+        example: SGD
+        type: string
+      declared_customs_value:
+        description: Item's customs value, must be greater than 0 unless category is `documents`
+        example: 100
+        type: number
+        format: double
+      sku:
+        description: "123 (string, optional) - Item's Stock Keeping Unit (SKU) as listed in your store. Maximum: `100`"
+        example: test
+        type: string
+    required:
+    - description
+    - actual_weight
+    - height
+    - width
+    - length
+    - category
+    - declared_currency
+    - declared_customs_value
+  UpdateAShipmentRequest:
+    title: Update a Shipment request
+    type: object
+    properties:
+      destination_country_alpha2:
+        description: Destination Country ISO 3166-1 alpha-2 [(see list of country alpha2 codes)](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2)
+        example: US
+        type: string
+      destination_city:
+        description: Destination City
+        example: New York
+        type: string
+      destination_name:
+        description: "Receiver's name. Maximum: `30`"
+        example: Aloha Chen
+        type: string
+      destination_address_line_1:
+        description: "Receiver's address line 1. Maximum: `50`"
+        example: 300 Park Avenue
+        type: string
+      destination_phone_number:
+        description: "Receiver's phone number. Mandatory for most couriers to facilitate the delivery. Maximum: `50`"
+        example: +1 234-567-890
+        type: string
+      items:
+        description: 'All shipment items, see below:'
+        type: array
+        items:
+          $ref: '#/definitions/Items4'
+      platform_name:
+        description: 'Sales platform name. Maximum: `200`'
+        example: Amazon
+        type: string
+      platform_order_number:
+        description: 'Order number on the sales platform. This number can be used to track the associated shipment. Maximum: `200`'
+        example: '#1234'
+        type: string
+      taxes_duties_paid_by:
+        description: 'Taxes & Duties paid by. Allowed values: `Sender, Receiver`. Default: `Sender`'
+        type: string
+      is_insured:
+        description: 'Optional, shipment will include insurance fee. Default: `false`'
+        type: boolean
+      selected_courier_id:
+        description: 'Optional, courier will be selected by default (applies if you integrate with Rate API). Default: `null`'
+        example: b8d528a7-a2d4-4510-a7ac-11cbbb6542cd
+        type: string
+      destination_postal_code:
+        description: Destination postal code. Mandatory for most countries (if not applicable, leave `null` or `0`)
+        example: 10022
+        type: string
+      destination_state:
+        description: Destination state. Mandatory for some countries (AU, CA, CN, MX, MY, US)
+        example: NY
+        type: string
+      destination_address_line_2:
+        description: "Receiver's address line 2. Maximum: `50`"
+        type: string
+      destination_email_address:
+        description: "Receiver's email. Required to send notifications to the receiver to track their package; mandatory for some couriers to facilitate the delivery. Maximum: `100`"
+        example: api-support@easyship.com
+        type: string
+    required:
+    - destination_country_alpha2
+    - destination_city
+    - destination_name
+    - destination_address_line_1
+    - destination_phone_number
+    - items
+  DeleteAShipmentResponse:
+    title: Delete a Shipment response
+    example:
+      status: Shipment successfully deleted
+    type: object
+    properties:
+      status:
+        description: ''
+        type: string
+    required:
+    - status
+  BuyLabelsRequest:
+    title: Buy Labels request
+    example:
+      shipments:
+      - easyship_shipment_id: ESUS3171766
+        courier_id: b4552ed2-ae95-4647-9746-5790bf252c7f
+      - easyship_shipment_id: ESUS2513756
+    type: object
+    properties:
+      shipments:
+        description: 'All shipments to be confirmed:'
+        type: array
+        items:
+          $ref: '#/definitions/Shipments'
+    required:
+    - shipments
+  Shipments:
+    title: shipments
+    type: object
+    properties:
+      easyship_shipment_id:
+        description: Easyship Shipment ID provided when creating the shipment
+        example: ESUS3171766
+        type: string
+      courier_id:
+        description: Courier ID in case you need to overwrite the one suggested by default
+        example: b4552ed2-ae95-4647-9746-5790bf252c7f
+        type: string
+    required:
+    - easyship_shipment_id
+  BuyLabelsResponse:
+    title: Buy Labels response
+    example:
+      message: Your labels are being generated
+      total_cost: 76
+      available_balance: 924
+      labels:
+      - easyship_shipment_id: ESUS3171766
+        label_state: pending
+        label_url:
+        status: success
+        tracking_number:
+        tracking_page_url: https://www.easyship.com/shipment-tracking/ESUS3171766
+      - easyship_shipment_id: ESUS2513756
+        label_state: pending
+        label_url:
+        status: success
+        tracking_number:
+        tracking_page_url: https://www.easyship.com/shipment-tracking/ESUS2513756
+    type: object
+    properties:
+      message:
+        description: ''
+        type: string
+      total_cost:
+        description: ''
+        type: number
+        format: double
+      available_balance:
+        description: ''
+        type: number
+        format: double
+      labels:
+        description: ''
+        type: array
+        items:
+          type: object
+    required:
+    - message
+    - total_cost
+    - available_balance
+    - labels
+  GetAvailablePickupSlotsResponse:
+    title: Get Available Pickup Slots response
+    example:
+      courier_id: b4552ed2-ae95-4647-9746-5790bf252c7f
+      courier_name: UPS
+      message: This Courier provides a pickup service. The available time slots are shown in local time, for the coming 7 days.
+      pickup:
+        provider_name: UPS
+        provider_customer_service_phone: +1 2345 6789
+        slots:
+          2017-04-25:
+          - min_time: 17
+            max_time: 21
+          2017-04-26:
+          - min_time: 10
+            max_time: 13
+          - min_time: 13
+            max_time: 17
+          - min_time: 17
+            max_time: 21
+          2017-04-27:
+          - min_time: 10
+            max_time: 13
+          - min_time: 13
+            max_time: 17
+          - min_time: 17
+            max_time: 21
+          2017-04-28:
+          - min_time: 10
+            max_time: 13
+          - min_time: 13
+            max_time: 17
+          - min_time: 17
+            max_time: 21
+          2017-04-29:
+          - min_time: 10
+            max_time: 13
+          - min_time: 13
+            max_time: 17
+          2017-04-30: []
+          2017-05-01:
+          - min_time: 10
+            max_time: 13
+          - min_time: 13
+            max_time: 17
+          - min_time: 17
+            max_time: 21
+          - min_time: 23
+            max_time: 24
+    type: object
+    properties:
+      courier_id:
+        description: ''
+        type: string
+      courier_name:
+        description: ''
+        type: string
+      message:
+        description: ''
+        type: string
+      pickup:
+        description: ''
+        type: object
+    required:
+    - courier_id
+    - courier_name
+    - message
+    - pickup
+  RequestAPickupRequest:
+    title: Request a Pickup request
+    example:
+      courier_id: b4552ed2-ae95-4647-9746-5790bf252c7f
+      preferred_date: 2016-12-08
+      preferred_max_time: 2016-12-08T18:00
+      preferred_min_time: 2016-12-08T09:00
+      easyship_shipment_ids:
+      - ESUS3171766
+    type: object
+    properties:
+      preferred_date:
+        description: Prefer pickup data
+        example: 2016-12-08
+        type: string
+      preferred_max_time:
+        description: Prefer maximum pickup datetime in local time
+        example: 2016-12-08T18:00
+        type: string
+      preferred_min_time:
+        description: Prefer minimum pickup datetime in local time
+        example: 2016-12-08T09:00
+        type: string
+      easyship_shipment_ids:
+        description: 'All shipments to be requested. Shipments must have the same courier and their labels must be pending or generated:'
+        type: array
+        items:
+          type: string
+      courier_id:
+        description: Courier ID provided by Easyship
+        example: b4552ed2-ae95-4647-9746-5790bf252c7f
+        type: string
+    required:
+    - preferred_date
+    - preferred_max_time
+    - preferred_min_time
+    - easyship_shipment_ids
+  RequestAPickupResponse:
+    title: Request a Pickup response
+    example:
+      courier_id: b4552ed2-ae95-4647-9746-5790bf252c7f
+      courier_name: UPS
+      easyship_shipment_ids:
+      - ESUS3171766
+      pickup:
+        easyship_pickup_id: PHK0000001
+        preferred_min_time: 2016-12-08T09:00
+        preferred_max_time: 2016-12-08T18:00
+        pickup_reference_number: 292494AGF4L
+        provider_name: UPS
+        provider_customer_service_phone: +1 2345 6789
+        shipments_count: 1
+        total_actual_weight: 1.0
+        pickup_state: requested
+        address:
+          line_1: 123 Test Street
+          line_2: Block 3
+          line_3: Unit 1000
+          postal_code: ABC123
+          city: Hong Kong
+          state:
+          country: Hong Kong
+          contact_email: asd@asd.com
+          contact_phone: +852-1234-5678
+          company_name: Test Plc.
+          contact_name: Foo Bar
+    type: object
+    properties:
+      courier_id:
+        description: ''
+        type: string
+      courier_name:
+        description: ''
+        type: string
+      easyship_shipment_ids:
+        description: ''
+        type: array
+        items:
+          type: string
+      pickup:
+        description: ''
+        type: object
+    required:
+    - courier_id
+    - courier_name
+    - easyship_shipment_ids
+    - pickup
+  MarkAsDirectlyHandedOverRequest:
+    title: Mark as Directly Handed Over request
+    example:
+      easyship_shipment_ids:
+      - ESUS3171766
+    type: object
+    properties:
+      easyship_shipment_ids:
+        description: 'All shipment id want to be requested:'
+        type: array
+        items:
+          type: string
+    required:
+    - easyship_shipment_ids
+  MarkAsDirectlyHandedOverResponse:
+    title: Mark as Directly Handed Over response
+    example:
+      direct_handover:
+        easyship_shipment_ids:
+        - ESUS3171766
+        pickup_state: completed
+    type: object
+    properties:
+      direct_handover:
+        description: ''
+        type: object
+    required:
+    - direct_handover
+  UpdateSettingsRequest:
+    title: Update Settings request
+    type: object
+    properties:
+      company:
+        $ref: '#/definitions/Company'
+    required:
+    - company
+  Company:
+    title: company
+    type: object
+    properties:
+      api_settings:
+        $ref: '#/definitions/ApiSettings'
+      addresses:
+        description: 'All addresses with 3 types, see below:'
+        type: array
+        items:
+          $ref: '#/definitions/Addresses'
+  ApiSettings:
+    title: api_settings
+    type: object
+    properties:
+      label_callback_url:
+        description: Callback URL which can accept POST request. If updated, a POST request will be made to validate the callback URL
+        example: https://api.myshop.com/webhook
+        type: string
+      send_tracking_email:
+        description: Send the tracking URL to the receiver when their order has been fulfilled
+        type: boolean
+      send_survey_email:
+        description: Authorize Easyship to send a short survey to the receiver to evaluate the courier's performance
+        type: boolean
+  Addresses:
+    title: addresses
+    type: object
+    properties:
+      category:
+        description: 'Address category. Allowed values: `pickup, billing, sender`'
+        example: billing
+        type: string
+      company_name:
+        description: 'Address company name. Maximum: `27`'
+        example: My Company Inc.
+        type: string
+      contact_name:
+        description: 'Address contact name. Maximum: `22`'
+        example: Charles from finance
+        type: string
+      contact_email:
+        description: 'Address contact email. Maximum: `50`'
+        example: billing@company.com
+        type: string
+      contact_phone:
+        description: 'Address contact phone. Maximum: `15`'
+        example: +1 234-567-890
+        type: string
+      country_alpha2:
+        description: Address Country Alpha2. Pickup and Sender addresses must be in the same country
+        example: US
+        type: string
+      city:
+        description: Address city
+        example: New York
+        type: string
+      postal_code:
+        description: Address . Mandatory for most countries (if not applicable, leave `null` or `0`)
+        example: 10300
+        type: string
+      line_1:
+        description: 'Address line 1. Maximum: `35`'
+        example: 123 Test Street
+        type: string
+      state:
+        description: Address state. Mandatory for some countries (AU, CA, CN, MX, MY, US)
+        example: NY
+        type: string
+      line_2:
+        description: 'Address line 2. Maximum: `35`'
+        example: block A
+        type: string
+    required:
+    - category
+    - company_name
+    - contact_name
+    - contact_email
+    - contact_phone
+    - country_alpha2
+    - city
+    - postal_code
+    - line_1
+  AddCreditsRequest:
+    title: Add Credits request
+    type: object
+    properties:
+      amount:
+        description: Amount in company's currency
+        example: 1000
+        type: number
+        format: double
+    required:
+    - amount
+  AddCreditsResponse:
+    title: Add Credits response
+    example:
+      payment_id: PHK01111172607
+      status: approved
+      credit_card_last_digits: 4242
+      available_balance: 6387.7600000000002
+      curreny: HKD
+    type: object
+    properties:
+      payment_id:
+        description: ''
+        type: string
+      status:
+        description: ''
+        type: string
+      credit_card_last_digits:
+        description: ''
+        type: string
+      available_balance:
+        description: ''
+        type: number
+        format: double
+      curreny:
+        description: ''
+        type: string
+    required:
+    - payment_id
+    - status
+    - credit_card_last_digits
+    - available_balance
+    - curreny
+  GetItemCategoriesResponse:
+    title: Get Item Categories response
+    example:
+      categories:
+      - name: Mobile Phones
+        slug: mobile_phones
+      - name: Tablets
+        slug: tablets
+      - name: Computers & Laptops
+        slug: computers_laptops
+      - name: Cameras
+        slug: cameras
+      - name: Accessory (no-battery)
+        slug: accessory_no_battery
+      - name: Accessory (with battery)
+        slug: accessory_with_battery
+      - name: Health & Beauty
+        slug: health_beauty
+      - name: Fashion
+        slug: fashion
+      - name: Watches
+        slug: watches
+      - name: Home Appliances
+        slug: home_appliances
+      - name: Home Decor
+        slug: home_decor
+      - name: Toys
+        slug: toys
+      - name: Sport & Leisure
+        slug: sport_leisure
+      - name: Bags & Luggages
+        slug: bags_luggages
+      - name: Audio Video
+        slug: audio_video
+      - name: Documents
+        slug: documents
+      - name: Jewelry
+        slug: jewelry
+      - name: Dry Food & Supplements
+        slug: dry_food_supplements
+      - name: Books & Collectibles
+        slug: books_collectibles
+      - name: Pet Accessory
+        slug: pet_accessory
+      - name: Gaming
+        slug: gaming
+      - name: Crowdfunding
+        slug: crowdfunding
+      - name: Others
+        slug: others
+    type: object
+    properties:
+      categories:
+        description: ''
+        type: array
+        items:
+          type: object
+    required:
+    - categories
