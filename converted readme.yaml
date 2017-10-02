@@ -12,6 +12,7 @@ securityDefinitions:
     type: apiKey
     in: header
     name: Authorization
+x-proxy-enabled: false
 schemes:
 - https
 consumes:
